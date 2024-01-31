@@ -3,11 +3,6 @@ name: Cypress-SauceDemo-tests
 on:
   [push]
 
-permissions:
-  pull-requests: write
-  contents: write
-  repository-projects: write
-
 
 jobs:
   build:
@@ -40,7 +35,7 @@ jobs:
           path: gh-pages
 
       - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@main
+        uses: simple-elf/allure-report-action@master
         if: always()
         with:
           allure_results: allure-results
