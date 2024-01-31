@@ -23,8 +23,8 @@ jobs:
           
       - name: Run tests on cypress
         run: |
-          export CYPRESS_LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
-          export CYPRESS_LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
+          export CYPRESS_LOGIN_USERNAME: ${{ secrets.CYPRESS_LOGIN_USERNAME }}
+          export CYPRESS_LOGIN_PASSWORD: ${{ secrets.CYPRESS_LOGIN_PASSWORD }}
           npm run tests
           
       - name: Get Allure history
