@@ -15,10 +15,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       allureWriter(on, config);
       return config;
-    },
-    env: {
-      "CYPRESS_LOGIN_USERNAME": Cypress.env("CYPRESS_LOGIN_USERNAME"),
-      "CYPRESS_LOGIN_PASSWORD": Cypress.env("CYPRESS_LOGIN_PASSWORD")
-  }
+    }
   },
 });
