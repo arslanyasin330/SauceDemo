@@ -23,10 +23,9 @@ jobs:
           
       - name: Run tests on cypress
         run: |
+          export CYPRESS_LOGIN_USERNAME: ${{ secrets.LOGIN_USERNAME }}
+          export CYPRESS_LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
           npm run tests
-        env:
-          CYPRESS_login_username: ${{secrets.LOGIN_USERNAME}}
-          CYPRESS_login_password: ${{secrets.LOGIN_PASSWORD}}
           
       - name: Get Allure history
         uses: actions/checkout@v3
