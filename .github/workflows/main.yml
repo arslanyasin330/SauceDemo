@@ -23,8 +23,7 @@ jobs:
           
       - name: Run tests on cypress
         run: |
-          npm run tests
-          npm run aftertest
+          npx cypress run --env allure=true
           
       - name: Get Allure history
         uses: actions/checkout@v3
