@@ -1,0 +1,24 @@
+name: Cypress-SauceDemo-tests
+
+on:
+  [push]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: |
+          npm install
+      - name: Run tests on cypress
+        run: |
+          npm run beforetest
+          npm run tests
+          npm run aftertest
