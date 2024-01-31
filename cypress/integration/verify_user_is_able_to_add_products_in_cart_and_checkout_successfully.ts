@@ -15,7 +15,7 @@ describe('Add Products in Cart and Checkout', () => {
          * username - environment variable
          * password - environment variable
          */
-        cy.login("standard_user", "secret_sauce")
+        cy.login(Cypress.env("login_username"), Cypress.env("login_password"))
         cy.url().should('equal', HomeTestData.homePageUrl)
 
         homePage.addProductToCart(HomeTestData.productBackpack)
