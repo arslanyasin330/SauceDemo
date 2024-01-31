@@ -1,0 +1,57 @@
+name: Cypress-SauceDemo-tests
+
+on:
+  [push]
+
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+          
+      - name: Install dependencies
+        run: |
+          npm install
+          
+      - name: Run tests on cypress
+        run: |
+          npm run tests
+          npm run aftertest
+          
+      - name: Get Allure history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Allure Report action from marketplace
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+          keep_reports: 20
+
+  
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          PERSONAL_TOKEN: "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"
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./allure-report
