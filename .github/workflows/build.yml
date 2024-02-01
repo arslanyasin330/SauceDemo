@@ -31,7 +31,7 @@ jobs:
             echo "${{ secrets.CYPRESS_LOGIN_PASSWORD }}"
             
       - name: Run tests on cypress
-        run: npm run tests
+        run: npm run cy:run
         env:
           CYPRESS_LOGIN_USERNAME: ${{ secrets.CYPRESS_LOGIN_USERNAME }}
           CYPRESS_LOGIN_PASSWORD: ${{ secrets.CYPRESS_LOGIN_PASSWORD }}
