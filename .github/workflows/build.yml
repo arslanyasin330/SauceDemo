@@ -22,8 +22,8 @@ jobs:
 
       - name: Print Secret Variable
         run: |
-            echo "${{ secrets.CYPRESS_LOGIN_PASSWORD }}"
-            echo "${{ secrets.CYPRESS_LOGIN_USERNAME }}"
+            echo "CYPRESS_LOGIN_USERNAME: $CYPRESS_LOGIN_USERNAME"
+            echo "CYPRESS_LOGIN_PASSWORD: $CYPRESS_LOGIN_PASSWORD"
             
       - name: Run tests on cypress
         run: npm run tests
