@@ -19,12 +19,18 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          
+
+      - name: Print Secret Variable
+        run: |
+            echo "${{ secrets.CYPRESS_LOGIN_PASSWORD }}"
+            echo "${{ secrets.CYPRESS_LOGIN_USERNAME }}"
+            
       - name: Run tests on cypress
         run: npm run tests
         env:
           CYPRESS_LOGIN_USERNAME: ${{ secrets.CYPRESS_LOGIN_USERNAME }}
           CYPRESS_LOGIN_PASSWORD: ${{ secrets.CYPRESS_LOGIN_PASSWORD }}
+    
           
       - name: Get Allure history
         uses: actions/checkout@v3
