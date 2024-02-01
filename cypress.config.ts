@@ -4,7 +4,6 @@ const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.saucedemo.com',
-    projectId: "4ff94c",
     specPattern: "cypress/integration/",
     viewportWidth: 2000,
     viewportHeight: 1260,
