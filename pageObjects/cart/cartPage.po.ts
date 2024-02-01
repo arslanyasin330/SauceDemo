@@ -6,11 +6,11 @@ export class CartPage extends BasePage {
     private readonly checkoutBtn = '[id="checkout"]';
 
     totalItemsInCart() {
-        return this.getElement(this.cartItem)
+        return this.getElement(this.cartItem);
     }
 
     getItemByName(productName: string) {
-        return this.getElement(this.cartItemName).filter(`:contains("${productName}")`)
+        return this.getElement(this.cartItemName).filter(`:contains("${productName}")`);
     }
 
     checkout() {
