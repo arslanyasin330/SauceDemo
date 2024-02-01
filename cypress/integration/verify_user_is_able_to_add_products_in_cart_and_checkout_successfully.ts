@@ -15,22 +15,22 @@ describe('Add Products in Cart and Checkout', () => {
          * username - environment variable
          * password - environment variable
          */
-        cy.login(Cypress.env("LOGIN_USERNAME"), Cypress.env("LOGIN_PASSWORD"))
-        cy.url().should('equal', HomeTestData.homePageUrl)
+        cy.login(Cypress.env("LOGIN_USERNAME"), Cypress.env("LOGIN_PASSWORD"));
+        cy.url().should('equal', HomeTestData.homePageUrl);
 
-        homePage.addProductToCart(HomeTestData.productBackpack)
-        homePage.getAddToCartBtn(HomeTestData.productBackpack).should('not.exist')
+        homePage.addProductToCart(HomeTestData.productBackpack);
+        homePage.getAddToCartBtn(HomeTestData.productBackpack).should('not.exist');
 
-        homePage.addProductToCart(HomeTestData.productBikeLight)
-        homePage.getAddToCartBtn(HomeTestData.productBackpack).should('not.exist')
+        homePage.addProductToCart(HomeTestData.productBikeLight);
+        homePage.getAddToCartBtn(HomeTestData.productBackpack).should('not.exist');
 
         homePage.goToCart();
-        cy.url().should('equal', CartTestData.cartPageUrl)
-        cartPage.totalItemsInCart().should('have.length', 2)
-        cartPage.getItemByName(HomeTestData.productBackpack).should('exist')
-        cartPage.getItemByName(HomeTestData.productBikeLight).should('exist')
+        cy.url().should('equal', CartTestData.cartPageUrl);
+        cartPage.totalItemsInCart().should('have.length', 2);
+        cartPage.getItemByName(HomeTestData.productBackpack).should('exist');
+        cartPage.getItemByName(HomeTestData.productBikeLight).should('exist');
 
         cartPage.checkout();
-        cy.url().should('equal', CheckoutTestData.checkoutPageUrl)
+        cy.url().should('equal', CheckoutTestData.checkoutPageUrl);
     });
 });
