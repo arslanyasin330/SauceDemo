@@ -23,7 +23,7 @@ jobs:
           npm install
             
       - name: Run tests on cypress
-        run: npm run cy:run
+        run: npm run tests
           
       - name: Get Allure history
         uses: actions/checkout@v3
