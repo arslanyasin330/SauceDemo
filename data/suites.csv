@@ -1,2 +1,2 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"broken","Thu Feb 01 00:31:42 GMT 2024","Thu Feb 01 00:31:43 GMT 2024","1238","","Add Products in Cart and Checkout","","Add Products in Cart and Checkout","add products in cart and checkout","add products in cart and checkout",""
+"passed","Thu Feb 01 00:35:36 GMT 2024","Thu Feb 01 00:35:39 GMT 2024","2499","","Add Products in Cart and Checkout","","Add Products in Cart and Checkout","add products in cart and checkout","add products in cart and checkout",""
