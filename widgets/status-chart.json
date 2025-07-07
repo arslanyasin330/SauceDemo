@@ -1,1 +1,1 @@
-[{"uid":"36b3b657df3ff49f","name":"add products in cart and checkout","time":{"start":1706749802167,"stop":1706749804395,"duration":2228},"status":"passed","severity":"normal"}]
+[{"uid":"82df77e19ec219ce","name":"add products in cart and checkout","time":{"start":1751904671509,"stop":1751904673818,"duration":2309},"status":"passed","severity":"normal"},{"uid":"e6009b284ca64a94","name":"add products in cart and checkout","time":{"start":1751904671507,"stop":1751904673763,"duration":2256},"status":"passed","severity":"normal"}]

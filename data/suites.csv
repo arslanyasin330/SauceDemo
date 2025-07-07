@@ -1,2 +1,3 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Feb 01 01:10:02 GMT 2024","Thu Feb 01 01:10:04 GMT 2024","2228","","Add Products in Cart and Checkout","","Add Products in Cart and Checkout","add products in cart and checkout","add products in cart and checkout",""
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","2309","add products in cart and checkout","","Mon Jul 07 16:11:11 GMT 2025","passed","Mon Jul 07 16:11:13 GMT 2025","","Add Products in Cart and Checkout","Add Products in Cart and Checkout","add products in cart and checkout"
+"","2256","add products in cart and checkout","","Mon Jul 07 16:11:11 GMT 2025","passed","Mon Jul 07 16:11:13 GMT 2025","","Add Products in Cart and Checkout","",""
